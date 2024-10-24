@@ -6,7 +6,27 @@ hide: true
 menu: nav/home.html
 ---
 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light Brown Background</title>
+    <style>
+        body {
+            background-color: #D2B48C; /* Light brown color */
+            color: #333; /* Dark text for contrast */
+            font-family: Arial, sans-serif; /* Optional: change font */
+        }
+    </style>
+</head>
+<body>
 
+# Your Markdown Title
+
+Your content goes here.
+
+</body>
+</html>
 
 <html>
 <h1 style="font-family: Garamond">Book Review</h1>
