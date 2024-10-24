@@ -59,8 +59,8 @@ Your content goes here.
         }
 
         .star-button {
-            width: 25px;
-            height: 25px;
+            width: 20px;
+            height: 20px;
             background-color: #FFD700; /* Gold color */
             border: none;
             cursor: pointer;
@@ -86,11 +86,11 @@ Your content goes here.
         }
 
         /* Positioning each star button */ /* NIKITH CHANGE THESE TO CHANGE POSITION */
-        .star1 { top: 20px; left: 20px; }
-        .star2 { top: 20px; left: 50px; }
-        .star3 { top: 20px; left: 80px; }
-        .star4 { top: 20px; left: 110px; }
-        .star5 { top: 20px; left: 140px; }
+        .star1 { top: -40px; left: 170px; }
+        .star2 { top: -40px; left: 200px; }
+        .star3 { top: -40px; left: 230px; }
+        .star4 { top: -40px; left: 260px; }
+        .star5 { top: -40px; left: 290px; }
     </style>
 <body>
 
