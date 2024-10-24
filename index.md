@@ -67,10 +67,10 @@ menu: nav/home.html
 
         /* Positioning each star button */ /* NIKITH CHANGE THESE TO CHANGE POSITION */
         .star1 { top: 20px; left: 20px; }
-        .star2 { top: 20px; left: 150px; }
-        .star3 { top: 150px; left: 80px; }
-        .star4 { top: 150px; left: 220px; }
-        .star5 { top: 300px; left: 100px; }
+        .star2 { top: 20px; left: 50px; }
+        .star3 { top: 20px; left: 80px; }
+        .star4 { top: 20px; left: 110px; }
+        .star5 { top: 20px; left: 140px; }
     </style>
 <body>
 
