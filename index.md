@@ -96,50 +96,38 @@ menu: nav/home.html
     </style>
 </head>
 <body>
-
     <h1>Book Reviews</h1>
-    
     <div id="reviewForm">
         <h2>Submit Your Review</h2>
         <form id="form">
             <label for="bookTitle">Book Title:</label>
             <input type="text" id="bookTitle" required><br><br>
-            
             <label for="bookAuthor">Author:</label>
             <input type="text" id="bookAuthor" required><br><br>
-            
             <label for="bookReview">Your Review:</label><br>
             <textarea id="bookReview" rows="4" required></textarea><br><br>
-            
             <button type="submit">Submit Review</button>
         </form>
     </div>
-
     <div id="reviews">
         <h2>Reviews</h2>
         <div id="reviewList"></div>
     </div>
-
     <script>
         document.getElementById('form').addEventListener('submit', function(event) {
             event.preventDefault(); // Prevent form submission
-            
             const title = document.getElementById('bookTitle').value;
             const author = document.getElementById('bookAuthor').value;
             const review = document.getElementById('bookReview').value;
-            
             // Create a new review element
             const reviewDiv = document.createElement('div');
             reviewDiv.classList.add('review');
             reviewDiv.innerHTML = `<h3>${title} by ${author}</h3><p>${review}</p>`;
-            
             // Add the new review to the review list
             document.getElementById('reviewList').appendChild(reviewDiv);
-            
             // Clear the form
             document.getElementById('form').reset();
         });
     </script>
-
 </body>
 </html>
