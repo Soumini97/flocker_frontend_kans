@@ -5,194 +5,145 @@ description: Book Review website
 hide: true
 menu: nav/home.html
 ---
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Light Brown Background</title>
+    <title>Book Review</title>
     <style>
         body {
-            background-color: #D2B48C; /* Light brown color */
-            color: #333; /* Dark text for contrast */
-            font-family: Arial, sans-serif; /* Optional: change font */
-        }
-    </style>
-</head>
-<body>
-
-# Your Markdown Title
-
-Your content goes here.
-
-</body>
-</html>
-
-<html>
-<h1 style="font-family: Garamond">Book Review</h1>
-<style>
-        .image {
-            position: relative; /* or absolute */
-            left: 200px; /* move right */
-            top: -65px; /* move down */
-        }
-    </style>
-<!-- book image thing -->
-<!-- book image thing -->
-<!-- book image thing -->
-<img src="{{site.baseurl}}/images/books.jpg" alt="image of books" style="width:6%" class="image">
-
-
-<!-- star thingies -->
-<!-- star thingies -->
-<!-- star thingies -->
-<!-- star thingies -->
-<!-- star thingies -->
-<!-- star thingies -->
-<!-- star thingies -->
-<style>
-        .container {
-            position: relative; /* Establish a positioning context */
-            width: 500px; /* Width of the container */
-            height: 500px; /* Height of the container */
-            /* border: 1px dashed #ccc;           border for container */
-        }
-
-        .star-button {
-            width: 20px;
-            height: 20px;
-            background-color: #FFD700; /* Gold color */
-            border: none;
-            cursor: pointer;
-            clip-path: polygon(
-                50% 0%, 
-                61% 35%, 
-                98% 35%, 
-                68% 57%, 
-                79% 91%, 
-                50% 70%, 
-                21% 91%, 
-                32% 57%, 
-                2% 35%, 
-                39% 35%
-            );
-            position: absolute; /* Position each button absolutely */
+            font-family: 'Arial', sans-serif;
+            background-color: #8B0000 !important;
+            margin: 0;
+            padding: 0;
             display: flex;
-            align-items: center;
             justify-content: center;
-            font-weight: bold;
-            color: white;
-            
+            align-items: center;
+            height: 100vh;
         }
-
-        /* Positioning each star button */ /* NIKITH CHANGE THESE TO CHANGE POSITION */
-        .star1 { top: -40px; left: 170px; }
-        .star2 { top: -40px; left: 200px; }
-        .star3 { top: -40px; left: 230px; }
-        .star4 { top: -40px; left: 260px; }
-        .star5 { top: -40px; left: 290px; }
-    </style>
-<body>
-
-<div class="container">
-    <button class="star-button star1"></button>
-    <button class="star-button star2"></button>
-    <button class="star-button star3"></button>
-    <button class="star-button star4"></button>
-    <button class="star-button star5"></button>
-</div>
-
-</body>
-
-<html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book Reviews</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
+        .container {
+            background-color: #f3c6b6;
+            width: 60%;
+            max-width: 800px;
             padding: 20px;
-            color: #333;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
         }
-        h1 {
+        .title {
             text-align: center;
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 20px;
         }
-        #reviewForm {
-            background: #fff;
+        .book-shelf {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+        .book-shelf img {
+            width: 120px;
+        }
+        .review-section {
+            display: flex;
+            justify-content: space-between;
+        }
+        .photo-section {
+            width: 40%;
+            text-align: center;
+            border: 2px dashed #000;
             padding: 20px;
+        }
+        .photo-section p {
+            margin-top: 100px;
+            font-weight: bold;
+        }
+        .details-section {
+            width: 55%;
+            padding: 20px;
+        }
+        .input-field {
+            margin-bottom: 10px;
+        }
+        .input-field label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .input-field input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
             border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            max-width: 500px;
-            margin: 20px auto;
         }
-        #reviews {
-            margin-top: 20px;
+        .rating {
+            text-align: center;
+            margin: 20px 0;
         }
-        .review {
-            background: #e9ecef;
+        .stars {
+            color: pink;
+            font-size: 24px;
+        }
+        .stars span {
+            cursor: pointer;
+        }
+        .review-textarea {
+            width: 100%;
+            height: 120px;
             padding: 10px;
-            margin: 10px 0;
+            border: 1px solid #ccc;
             border-radius: 5px;
-        }
-        .review h3 {
-            margin: 0 0 5px;
-        }
-        .review p {
-            margin: 0;
         }
     </style>
 </head>
 <body>
+    <div class="container">
+        <div class="title" style="color:#8B0000;">Book Review</div>
+        <div class="book-shelf">
+            <img src="https://content.mycutegraphics.com/graphics/book/bookshelf-clipart-book-clip-art.png" alt="Bookshelf Image">
+        </div>
+        
+        <div class="review-section">
+            <!-- Photo Section -->
+            <div class="photo-section">
+                <p>PHOTO HERE</p>
+            </div>
+            <!-- Book Details -->
+            <div class="details-section">
+                <div class="input-field">
+                    <label for="title" style="color:#8B0000;">Title:</label>
+                    <input type="text" id="title" placeholder="Enter book title">
+                </div>
+                <div class="input-field">
+                    <label for="author" style="color:#8B0000;">Author:</label>
+                    <input type="text" id="author" placeholder="Enter author name">
+                </div>
+                <div class="input-field">
+                    <label for="year" style="color:#8B0000;">Year:</label>
+                    <input type="text" id="year" placeholder="Enter year of publication">
+                </div>
+                <div class="input-field">
+                    <label for="pages" style="color:#8B0000;">Page:</label>
+                    <input type="text" id="pages" placeholder="Enter number of pages">
+                </div>
+            </div>
+        </div>
 
-    <h1>Book Reviews</h1>
-    
-    <div id="reviewForm">
-        <h2>Submit Your Review</h2>
-        <form id="form">
-            <label for="bookTitle">Book Title:</label>
-            <input type="text" id="bookTitle" required><br><br>
-            
-            <label for="bookAuthor">Author:</label>
-            <input type="text" id="bookAuthor" required><br><br>
-            
-            <label for="bookReview">Your Review:</label><br>
-            <textarea id="bookReview" rows="4" required></textarea><br><br>
-            
-            <button type="submit">Submit Review</button>
-        </form>
+        <!-- Rating and Review Section -->
+        <div class="rating">
+            <p style="color:#8B0000;">Rate:</p>
+            <div class="stars">
+                <span>&#9733;</span>
+                <span>&#9733;</span>
+                <span>&#9733;</span>
+                <span>&#9733;</span>
+                <span>&#9733;</span>
+            </div>
+        </div>
+
+        <div class="review-section">
+            <label for="review" style="color:#8B0000;">Review:</label>
+            <textarea id="review" class="review-textarea" placeholder="Write your review here"></textarea>
+        </div>
     </div>
-
-    <div id="reviews">
-        <h2>Reviews</h2>
-        <div id="reviewList"></div>
-    </div>
-
-    <script>
-        document.getElementById('form').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent form submission
-            
-            const title = document.getElementById('bookTitle').value;
-            const author = document.getElementById('bookAuthor').value;
-            const review = document.getElementById('bookReview').value;
-            
-            // Create a new review element
-            const reviewDiv = document.createElement('div');
-            reviewDiv.classList.add('review');
-            reviewDiv.innerHTML = `<h3>${title} by ${author}</h3><p>${review}</p>`;
-            
-            // Add the new review to the review list
-            document.getElementById('reviewList').appendChild(reviewDiv);
-            
-            // Clear the form
-            document.getElementById('form').reset();
-        });
-    </script>
-
 </body>
 </html>
