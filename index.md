@@ -96,54 +96,50 @@ menu: nav/home.html
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="title" style="color:#8B0000;">Book Review</div>
-        <div class="book-shelf">
-            <img src="https://content.mycutegraphics.com/graphics/book/bookshelf-clipart-book-clip-art.png" alt="Bookshelf Image">
-        </div>
-        
-        <div class="review-section">
-            <!-- Photo Section -->
-            <div class="photo-section">
-                <p>PHOTO HERE</p>
-            </div>
-            <!-- Book Details -->
-            <div class="details-section">
-                <div class="input-field">
-                    <label for="title" style="color:#8B0000;">Title:</label>
-                    <input type="text" id="title" placeholder="Enter book title">
-                </div>
-                <div class="input-field">
-                    <label for="author" style="color:#8B0000;">Author:</label>
-                    <input type="text" id="author" placeholder="Enter author name">
-                </div>
-                <div class="input-field">
-                    <label for="year" style="color:#8B0000;">Year:</label>
-                    <input type="text" id="year" placeholder="Enter year of publication">
-                </div>
-                <div class="input-field">
-                    <label for="pages" style="color:#8B0000;">Page:</label>
-                    <input type="text" id="pages" placeholder="Enter number of pages">
-                </div>
-            </div>
-        </div>
 
-        <!-- Rating and Review Section -->
-        <div class="rating">
-            <p style="color:#8B0000;">Rate:</p>
-            <div class="stars">
-                <span>&#9733;</span>
-                <span>&#9733;</span>
-                <span>&#9733;</span>
-                <span>&#9733;</span>
-                <span>&#9733;</span>
-            </div>
-        </div>
-
-        <div class="review-section">
-            <label for="review" style="color:#8B0000;">Review:</label>
-            <textarea id="review" class="review-textarea" placeholder="Write your review here"></textarea>
-        </div>
+    <h1>Book Reviews</h1>
+    
+    <div id="reviewForm">
+        <h2>Submit Your Review</h2>
+        <form id="form">
+            <label for="bookTitle">Book Title:</label>
+            <input type="text" id="bookTitle" required><br><br>
+            
+            <label for="bookAuthor">Author:</label>
+            <input type="text" id="bookAuthor" required><br><br>
+            
+            <label for="bookReview">Your Review:</label><br>
+            <textarea id="bookReview" rows="4" required></textarea><br><br>
+            
+            <button type="submit">Submit Review</button>
+        </form>
     </div>
+
+    <div id="reviews">
+        <h2>Reviews</h2>
+        <div id="reviewList"></div>
+    </div>
+
+    <script>
+        document.getElementById('form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+            
+            const title = document.getElementById('bookTitle').value;
+            const author = document.getElementById('bookAuthor').value;
+            const review = document.getElementById('bookReview').value;
+            
+            // Create a new review element
+            const reviewDiv = document.createElement('div');
+            reviewDiv.classList.add('review');
+            reviewDiv.innerHTML = `<h3>${title} by ${author}</h3><p>${review}</p>`;
+            
+            // Add the new review to the review list
+            document.getElementById('reviewList').appendChild(reviewDiv);
+            
+            // Clear the form
+            document.getElementById('form').reset();
+        });
+    </script>
+
 </body>
 </html>
